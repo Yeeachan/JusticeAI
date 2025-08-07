@@ -48,7 +48,7 @@ Each court decision in `updated_laws.json` should follow this structure:
 ```
 ---
 
-##📈 Output Format (Results)
+## 📈 Output Format (Results)
 Each entry includes recommendation results and evaluation metrics:
 
 ```json
@@ -72,10 +72,7 @@ Each entry includes recommendation results and evaluation metrics:
 ```
 ---
 
-## 🧪 Evaluation Summary
-Total Test Cases: 87,000
----
-##🏛️ Model Architecture
+## 🏛️ Model Architecture
 Default Model: klue/roberta-small
 
 Compatible Models (easily switchable via model_name):
