@@ -24,11 +24,11 @@ pip install torch transformers scikit-learn tqdm
 
 # 2. Run the recommendation & evaluation script
 python data_recom_22.py
-
+---
+```
 ## 🗂️ Dataset Format (Input)
 
 Each court decision in `updated_laws.json` should follow this structure:
-```
 
 ```json
 {
@@ -43,6 +43,7 @@ Each court decision in `updated_laws.json` should follow this structure:
   ]
 }
 '''
+---
 ##📈 Output Format (Results)
 Each entry includes recommendation results and evaluation metrics:
 
