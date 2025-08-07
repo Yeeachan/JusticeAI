@@ -28,6 +28,7 @@ python data_recom_22.py
 ## 🗂️ Dataset Format (Input)
 
 Each court decision in `updated_laws.json` should follow this structure:
+```
 
 ```json
 {
