@@ -16,6 +16,15 @@ It combines **dense passage retrieval** (KLUE-RoBERTa or any Transformer-based m
 
 ---
 
+## 🚀 How to Run
+
+```bash
+# 1. Install dependencies
+pip install torch transformers scikit-learn tqdm
+
+# 2. Run the recommendation & evaluation script
+python data_recom_22.py
+
 ## 🗂️ Dataset Format (Input)
 
 Each court decision in `updated_laws.json` should follow this structure:
@@ -32,3 +41,55 @@ Each court decision in `updated_laws.json` should follow this structure:
     }
   ]
 }
+
+##📈 Output Format (Results)
+Each entry includes recommendation results and evaluation metrics:
+
+```json
+{
+  "input_case_number": "2022다12345",
+  "recommended": [
+    {
+      "recommended_case_number": "2020다67890",
+      "similarity": 0.8731,
+      "true_laws": [...]
+    }
+  ],
+  "evaluation": {
+    "Precision": 0.75,
+    "Recall": 1.0,
+    "F1 Score": 0.857,
+    "MRR": 1.0,
+    "Recall@K": 1.0
+  }
+}
+
+## 🧪 Evaluation Summary
+Total Test Cases: 87,000
+
+##🏛️ Model Architecture
+Default Model: klue/roberta-small
+
+Compatible Models (easily switchable via model_name):
+
+klue/bert-base
+
+monologg/kobert
+
+beomi/KcELECTRA-base
+
+snunlp/KR-BERT-char16424
+
+(or any Hugging Face encoder-based model)
+
+<pre><code class="language-python"> # In the code, replace this line: model_name = "klue/roberta-small" # with any compatible model: model_name = "klue/bert-base" </code></pre>
+Embedding: pooler_output or [CLS] vector
+
+Similarity Measure: Cosine similarity between embeddings
+
+📁 Project Structure
+```bash
+├── data_recom_22.py                     # Main code: embedding, recommendation, evaluation
+├── updated_laws.json                    # Input data: legal case documents
+├── judgment_recommendation_results.json # Output: recommendation + evaluation
+└── README.md                            # Project description
