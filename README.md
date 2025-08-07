@@ -97,7 +97,7 @@ Similarity Measure: Cosine similarity between embeddings
 ---
 📁 Project Structure
 ```bash
-├── data_recom_22.py                     # Main code: embedding, recommendation, evaluation
+├── justiceAI.py                     # Main code: embedding, recommendation, evaluation
 ├── updated_laws.json                    # Input data: legal case documents
 ├── judgment_recommendation_results.json # Output: recommendation + evaluation
 └── README.md                            # Project description
