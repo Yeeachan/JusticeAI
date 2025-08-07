@@ -33,7 +33,7 @@ python data_recom_22.py
 
 Each court decision in `updated_laws.json` should follow this structure:
 
-```json
+```bash
 {
   "case_number": "2022다12345",
   "case_text": "이 사건은 ...",
@@ -45,8 +45,9 @@ Each court decision in `updated_laws.json` should follow this structure:
     }
   ]
 }
-'''
+```
 ---
+
 ##📈 Output Format (Results)
 Each entry includes recommendation results and evaluation metrics:
 
@@ -68,10 +69,12 @@ Each entry includes recommendation results and evaluation metrics:
     "Recall@K": 1.0
   }
 }
+```
+---
 
 ## 🧪 Evaluation Summary
 Total Test Cases: 87,000
-
+---
 ##🏛️ Model Architecture
 Default Model: klue/roberta-small
 
@@ -91,7 +94,7 @@ snunlp/KR-BERT-char16424
 Embedding: pooler_output or [CLS] vector
 
 Similarity Measure: Cosine similarity between embeddings
-
+---
 📁 Project Structure
 ```bash
 ├── data_recom_22.py                     # Main code: embedding, recommendation, evaluation
