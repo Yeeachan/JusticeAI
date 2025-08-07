@@ -23,7 +23,7 @@ It combines **dense passage retrieval** (KLUE-RoBERTa or any Transformer-based m
 pip install torch transformers scikit-learn tqdm
 
 # 2. Run the recommendation & evaluation script
-python data_recom_22.py
+python justiceAI.py
 
 ```
 
